@@ -5,13 +5,13 @@
         .top-header
           .logo
             h1
-              a(href="")
+              a
                 span P
                 |ERSONAL
           .nav-list-wrapper
             ul.nav-list
               li(:class="menus === menu?'active':''" v-for="menu in menusList")
-                a(:data-hover="menu") {{menu}}
+                a(:data-hover="menu" @click="scrollToFunc(menu)") {{menu}}
         .personal-info-wrapper
           .personal-info
             .info-top
@@ -36,7 +36,7 @@
                   .info-message 178490658@qq.com
           .personal-img
             img(src="../assets/images/header/account.jpg")
-    #about.about
+    #about.about(ref="about")
       .about-left
       .about-right
         .about-banner
@@ -49,18 +49,18 @@
           .ul-ctrl
             ul
               li(v-for="index in 2" @click="aboutIndex = index" :class="aboutIndex === index?'cur':''")
-    #skills.chapter
+    #skills.chapter(ref="skills")
       .container
         chapterTitle(:color="skills.color" :tip="skills.tip" :title="skills.title")
         .skills-cubes-wrapper
           .skill-item(v-for="skill in skillsData")
             skillsCube(:skill="skill")
-    #experience.chapter
+    #experience.chapter(ref="experience")
       .container
         chapterTitle(:color="experience.color" :tip="experience.tip" :title="experience.title")
         .experiences
           experience-line
-    #contact.chapter
+    #contact.chapter(ref="contact")
       .container
         chapterTitle(:color="contact.color" :tip="contact.tip" :title="contact.title")
         .contact-wrapper
@@ -70,10 +70,10 @@
             .title Contact By Email
             .contact-message
               span E-mail：
-              a 178490658@qq.com
+              a(href="mailto:178490658@qq.com") 178490658@qq.com
             .contact-message
               span E-mail：
-              a qq178490658@163.com
+              a(href="mailto:qq178490658@163.com") qq178490658@163.com
           .contact-box
             .icon
               i.glyphicon.glyphicon-earphone
@@ -87,8 +87,8 @@
             .title GET MY RESUME
             .contact-message
               p
-                span download&nbsp;
-                a
+                a(href="../../static/file/邵敏杰-web前端.pdf" download="邵敏杰-web前端")
+                  |download&nbsp;
                   i.glyphicon.glyphicon-download-alt
 </template>
 
@@ -122,7 +122,17 @@
           color: 'white',
           tip: 'CONTACT ME',
           title: 'GET IN TOUCH WITH ME'
-        }
+        },
+        scrollTop: 0
+      }
+    },
+    methods: {
+      scrollToFunc(menu) {
+        debugger
+        this.$nextTick(() => {
+          console.log(this.$refs[menu].getBoundingClientRect().top)
+          document.documentElement.scrollTop = this.$refs[menu].getBoundingClientRect().top
+        })
       }
     },
     components: {
@@ -351,6 +361,7 @@
         .contact-wrapper
           margin-top 80px
           overflow hidden
+          text-align center
           .contact-box
             background-color #fff
             width 440px
@@ -358,8 +369,11 @@
             text-align center
             box-sizing border-box
             padding 32px
-            float left
+            display inline-block
             border-right 1px solid #eee
+            font-size 0
+            vertical-align top
+            border-top 1px solid #eee
             .icon
               color #00a78e
               font-size 28px
@@ -385,4 +399,6 @@
               &>p
                 color #00a78e
                 cursor pointer
+                a
+                  color #00a78e
 </style>
