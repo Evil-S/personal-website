@@ -58,14 +58,44 @@
     #experience.chapter
       .container
         chapterTitle(:color="experience.color" :tip="experience.tip" :title="experience.title")
-        .skills-cubes-wrapper
-          .skill-item(v-for="skill in skillsData")
-            skillsCube(:skill="skill")
+        .experiences
+          experience-line
+    #contact.chapter
+      .container
+        chapterTitle(:color="contact.color" :tip="contact.tip" :title="contact.title")
+        .contact-wrapper
+          .contact-box
+            .icon
+              i.glyphicon.glyphicon-envelope
+            .title Contact By Email
+            .contact-message
+              span E-mail：
+              a 178490658@qq.com
+            .contact-message
+              span E-mail：
+              a qq178490658@163.com
+          .contact-box
+            .icon
+              i.glyphicon.glyphicon-earphone
+            .title Contact By Phone
+            .contact-message
+              span Phone：
+              span 15757856515
+          .contact-box
+            .icon
+              i.glyphicon.glyphicon-list-alt
+            .title GET MY RESUME
+            .contact-message
+              p
+                span download&nbsp;
+                a
+                  i.glyphicon.glyphicon-download-alt
 </template>
 
 <script type="text/ecmascript-6">
   import chapterTitle from '../components/chapterTitle'
   import skillsCube from '../components/skillsCube'
+  import experienceLine from '../components/experienceLine'
   import {
     about, skills
   } from '../script/mockData'
@@ -87,12 +117,18 @@
           tip: 'WHAT I DID',
           title: 'MY EXPERIENCE'
         },
-        skillsData: skills
+        skillsData: skills,
+        contact: {
+          color: 'white',
+          tip: 'CONTACT ME',
+          title: 'GET IN TOUCH WITH ME'
+        }
       }
     },
     components: {
       chapterTitle,
-      skillsCube
+      skillsCube,
+      experienceLine
     }
   }
 </script>
@@ -232,7 +268,7 @@
         width 50%
         height 580px
         float left
-        background-image url("../assets/images/header/account.jpg")
+        background-image url("../assets/images/pic2.jpg")
         background-size cover
       .about-right
         width 50%
@@ -291,16 +327,14 @@
                   margin-bottom 0
     .chapter
       width 100%
-      height 632px
       padding 80px 0
-      &#skills
-        background-color #1b242f
-      &#experience
-        background-color #fff
       .container
         width 80%
         height 100%
         margin 0 auto
+      &#skills
+        background-color #1b242f
+        height 632px
         .skills-cubes-wrapper
           margin-top 88px
           text-align center
@@ -308,4 +342,47 @@
           .skill-item
             display inline-block
             margin 0 8px
+      &#experience
+        background-color #fff
+        .experiences
+          margin-top 80px
+      &#contact
+        background-color #1b242f
+        .contact-wrapper
+          margin-top 80px
+          overflow hidden
+          .contact-box
+            background-color #fff
+            width 440px
+            height 200px
+            text-align center
+            box-sizing border-box
+            padding 32px
+            float left
+            border-right 1px solid #eee
+            .icon
+              color #00a78e
+              font-size 28px
+            .title
+              margin 10px 0
+              font-size 18px
+              color #333
+            .contact-message
+              font-size 14px
+              margin 10px 0
+              text-align center
+              &>span
+                display inline-block
+                width 80px
+                text-align right
+                color #999
+              &>a
+                display inline-block
+                width 160px
+                text-align left
+                color #00a78e
+                cursor pointer
+              &>p
+                color #00a78e
+                cursor pointer
 </style>
