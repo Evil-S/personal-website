@@ -1,17 +1,28 @@
 <template lang="pug">
   div.skills-cube-wrapper(ref="skillsBox")
-    .skill-cube
+    .skill-cube(v-if='isPC')
       .front
         .skill-img
           img(height='180px' width='180px' :src='skill.url')
         .skill-name {{skill.name}}
       .hide
         p {{skill.level}}
+    .skill-phone-cue(v-else)
+      .front
+        .skill-img
+          img(height='180px' width='180px' :src='skill.url')
+        .skill-name {{skill.name}}
 </template>
 
 <script type="text/ecmascript-6" scoped>
   import {Cure} from '../script/cube'
-
+  const TESTPC = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+  let isPC
+  if ((navigator.userAgent.match(TESTPC))) {
+    isPC = false
+  } else {
+    isPC = true
+  }
   export default {
     name: 'skillsCube',
     props: {
@@ -22,6 +33,11 @@
           level: '',
           url: ''
         }
+      }
+    },
+    data() {
+      return {
+        isPC: isPC
       }
     },
     mounted() {
@@ -37,8 +53,35 @@
     width 180px
     height 180px
     list-style none
-    margin 5px
     perspective 300px
+    .skill-phone-cue
+      width 180px
+      height 180px
+      .front
+        width 100%
+        height 100%
+        background-color #fff
+        display flex
+        flex-direction column
+        .skill-img
+          flex 1 1 auto
+          width 100%
+          height 0
+          position relative
+          img
+            position absolute
+            left 50%
+            top 50%
+            width 70%
+            height auto
+            transform translate(-50%, -50%)
+        .skill-name
+          flex 0 0 auto
+          width 100%
+          height 32px
+          line-height 32px
+          text-align center
+          font-size 16px
     .skill-cube
       position absolute
       top 0

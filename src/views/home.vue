@@ -153,7 +153,8 @@
       position relative
       font-family 'Asap', sans-serif
       .container
-        width 1140px
+        max-width 1140px
+        width 80%
         margin 0 auto
         .top-header
           width 100%
@@ -273,16 +274,19 @@
       width 100%
       height 580px
       overflow hidden
+      display flex
+      flex-direction row
       .about-left
+        flex 1 1 auto
         width 50%
         height 580px
-        float left
         background-image url("../../static/images/pic2.jpg")
         background-size cover
       .about-right
+        flex 1 0 auto
         width 50%
+        min-width 548px
         height 580px
-        float left
         .about-banner
           width 100%
           height 100%
@@ -344,13 +348,21 @@
       &#skills
         background-color #1b242f
         height 632px
-        .skills-cubes-wrapper
-          margin-top 88px
-          text-align center
-          overflow hidden
-          .skill-item
-            display inline-block
-            margin 0 8px
+        .container
+          min-width 824px
+          .skills-cubes-wrapper
+            margin-top 88px
+            text-align center
+            overflow hidden
+            display flex
+            flex-direction row
+            justify-content center
+            flex-wrap wrap
+            .skill-item
+              display block
+              width 180px
+              height 180px
+              margin 8px
       &#experience
         background-color #fff
         .experiences
