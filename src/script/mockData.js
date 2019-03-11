@@ -11,19 +11,19 @@ var about = [{
 var skills = [
   {
     name: 'HTML',
-    level: '掌握，能够独立开发前端项目',
+    level: '熟练运用HTML+CSS开发前端项目，解决兼容性问题',
     url: 'static/images/skills/html.png'
   }, {
     name: 'CSS',
-    level: '掌握，能够独立开发前端项目',
+    level: '熟练运用HTML+CSS开发前端项目，解决兼容性问题，高度还原效果图以及分辨率适配工作',
     url: 'static/images/skills/css.png'
   }, {
     name: 'JavaScript',
-    level: '掌握，能够独立开发前端项目',
+    level: '掌握，完成web端的交互工作，解决兼容性问题',
     url: 'static/images/skills/js.jpg'
   }, {
     name: 'JQuery',
-    level: '掌握，能够独立开发前端项目',
+    level: '掌握，完成web端的交互工作，解决兼容性问题，能够开发jquery插件',
     url: 'static/images/skills/jquery.jpg'
   }, {
     name: 'Vue',
@@ -31,11 +31,11 @@ var skills = [
     url: 'static/images/skills/vue.png'
   }, {
     name: 'Git',
-    level: '掌握，能够独立开发前端项目',
+    level: '熟练使用git管理代码，提高开发效率',
     url: 'static/images/skills/git.jpeg'
   }, {
     name: 'Webstorm',
-    level: '掌握，能够独立开发前端项目',
+    level: 'webstorm是最好的前端开发工具！！！',
     url: 'static/images/skills/webstorm.png'
   }
 ]
