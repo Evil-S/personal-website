@@ -57,7 +57,7 @@
           color #fff
           font-size 16px
           position relative
-          background-image url("../assets/images/computer.png")
+          background-image url("../../static/images/computer.png")
           background-size 30px 30px
           background-position center center
           background-repeat no-repeat

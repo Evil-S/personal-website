@@ -35,7 +35,7 @@
                   .info-name E-MAIL
                   .info-message 178490658@qq.com
           .personal-img
-            img(src="../assets/images/header/account.jpg")
+            img(src="../../static/images/header/account.jpg")
     #about.about(ref="about")
       .about-left
       .about-right
@@ -128,7 +128,6 @@
     },
     methods: {
       scrollToFunc(menu) {
-        debugger
         this.$nextTick(() => {
           console.log(this.$refs[menu].getBoundingClientRect().top)
           document.documentElement.scrollTop = this.$refs[menu].getBoundingClientRect().top
@@ -148,7 +147,7 @@
   .content-wrapper
     width 100%
     #home.header
-      background url('../assets/images/header/header_bg.jpg') no-repeat center top
+      background url('../../static/images/header/header_bg.jpg') no-repeat center top
       background-size cover
       min-height 650px
       position relative
@@ -278,7 +277,7 @@
         width 50%
         height 580px
         float left
-        background-image url("../assets/images/pic2.jpg")
+        background-image url("../../static/images/pic2.jpg")
         background-size cover
       .about-right
         width 50%

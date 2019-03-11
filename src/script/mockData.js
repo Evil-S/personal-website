@@ -12,31 +12,31 @@ var skills = [
   {
     name: 'HTML',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/html.png'
+    url: 'static/images/skills/html.png'
   }, {
     name: 'CSS',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/css.png'
+    url: 'static/images/skills/css.png'
   }, {
     name: 'JavaScript',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/js.jpg'
+    url: 'static/images/skills/js.jpg'
   }, {
     name: 'JQuery',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/jquery.jpg'
+    url: 'static/images/skills/jquery.jpg'
   }, {
     name: 'Vue',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/vue.png'
+    url: 'static/images/skills/vue.png'
   }, {
     name: 'Git',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/git.jpeg'
+    url: 'static/images/skills/git.jpeg'
   }, {
     name: 'Webstorm',
     level: '掌握，能够独立开发前端项目',
-    url: 'static/skills/webstorm.png'
+    url: 'static/images/skills/webstorm.png'
   }
 ]
 export {
