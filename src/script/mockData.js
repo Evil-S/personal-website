@@ -15,7 +15,7 @@ var skills = [
     url: 'static/images/skills/html.png'
   }, {
     name: 'CSS',
-    level: '熟练运用HTML+CSS开发前端项目，解决兼容性问题，高度还原效果图以及分辨率适配工作',
+    level: '能够解决兼容性问题，高度还原效果图以及分辨率适配工作',
     url: 'static/images/skills/css.png'
   }, {
     name: 'JavaScript',
