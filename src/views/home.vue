@@ -13,7 +13,7 @@
               .nav-list-wrapper
                 ul.nav-list
                   li(:class="menus === menu?'active':''" v-for="menu in menusList")
-                    a(:data-hover="menu" @click="scrollToFunc(menu)") {{menu}}
+                    a(:data-hover="menu" @click="handleMenuClick(menu) ") {{menu}}
         .personal-info-wrapper
           .personal-info
             .info-top
@@ -105,7 +105,7 @@
     data() {
       return {
         menus: 'home',
-        menusList: ['home', 'about', 'skills', 'experience', 'contact'],
+        menusList: ['home', 'about', 'skills', 'experience', 'contact', 'production'],
         aboutIndex: 1,
         about: about,
         skills: {
@@ -136,6 +136,15 @@
       })
     },
     methods: {
+      handleMenuClick(menu) {
+        if (menu === 'production') {
+          this.$router.push({
+            name: 'production'
+          })
+        } else {
+          this.scrollToFunc(menu)
+        }
+      },
       scrollToFunc(menu) {
         this.$nextTick(() => {
           let top = this.$refs[menu].getBoundingClientRect().top

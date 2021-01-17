@@ -27,7 +27,7 @@ let skills = [
     url: 'static/images/skills/jquery.jpg'
   }, {
     name: 'Vue',
-    level: '已掌握，能够独立开发前端项目',
+    level: '熟练使用vue+elementUI开发项目，解决项目中遇到的问题',
     url: 'static/images/skills/vue.png'
   }, {
     name: 'React',
@@ -39,7 +39,7 @@ let skills = [
     url: 'static/images/skills/git.jpeg'
   }, {
     name: 'WebStorm',
-    level: 'WebStorm是最好的前端开发工具！！！',
+    level: 'WebStorm是最香的前端开发工具！！！',
     url: 'static/images/skills/webstorm.png'
   }
 ]
