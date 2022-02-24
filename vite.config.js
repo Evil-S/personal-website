@@ -20,7 +20,7 @@ export default defineConfig({
     extensions: ['.vue', '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
     alias: [
       {
-        find: /\/@\//,
+        find: /@\//,
         replacement: pathResolve('src') + '/',
       }
     ]

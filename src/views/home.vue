@@ -28,14 +28,14 @@
                   .info-name D.O.B
                   .info-message 1994-07-24
                 li
-                  .info-name PHONE
-                  .info-message +86 15757856515
-                li
                   .info-name ADDRESS
                   .info-message 杭州市萧山区
                 li
                   .info-name E-MAIL
                   .info-message 178490658@qq.com
+                li
+                  .info-name EDUCATION
+                  .info-message 本科（计算机科学与技术）
           .personal-img
             img(src="../../static/images/header/account.jpg")
     #about.about(ref="about")
@@ -76,13 +76,6 @@
             .contact-message
               span E-mail：
               a(href="mailto:qq178490658@163.com") qq178490658@163.com
-          .contact-box
-            .icon
-              i.glyphicon.glyphicon-earphone
-            .title Contact By Phone
-            .contact-message
-              span Phone：
-              span 15757856515
           .contact-box
             .icon
               i.glyphicon.glyphicon-list-alt
